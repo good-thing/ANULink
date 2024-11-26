@@ -8,7 +8,20 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton">asd</Button>
-    </StackPanel>
+    <Grid Width="240" Height="120">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="Red" Grid.Column="0" Grid.Row="0"/>
+        <Rectangle Fill="Blue" Grid.Column="0" Grid.Row="1"/>
+        <Rectangle Fill="Green" Grid.Column="1" Grid.Row="0"/>
+        <Rectangle Fill="Yellow" Grid.Column="1" Grid.Row="1"/>
+    </Grid>
 </Window>
