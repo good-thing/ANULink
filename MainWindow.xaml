@@ -7,8 +7,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    
+    <!-- 수정전 원본코드
     <Grid Width="240" Height="120">
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"/>
             <ColumnDefinition Width="50"/>
@@ -24,5 +26,46 @@
         <Rectangle Fill="Green" Grid.Column="1" Grid.Row="0"/>
         <Rectangle Fill="Yellow" Grid.Column="1" Grid.Row="1"/>
     </Grid>
+    -->
     
+    <!-- 초기 구성(추가한 부분: 간단한 틀만 구성했고 보고 괜찮으면 여기서 추가하고 아니면 지워도 돼)-->
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <!-- 상단 패널 -->
+        <StackPanel Orientation="Horizontal" Background="#0077B5" Height="60" VerticalAlignment="Top" Margin="0,20">
+            <Image Source="Assets/LinkedInLogo.png" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" Height="40"/>
+            <Button Content="홈" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Transparent" Foreground="White" Margin="20,0"/>
+            <Button Content="팀" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Transparent" Foreground="White" Margin="20,0"/>
+            <Button Content="직책" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Transparent" Foreground="White" Margin="20,0"/>
+            <Button Content="메세지" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Transparent" Foreground="White" Margin="20,0"/>
+            <Button Content="알림" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Transparent" Foreground="White" Margin="20,0"/>
+            <Button Content="내정보" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Transparent" Foreground="White" Margin="20,0"/>
+        </StackPanel>
+        
+        <!-- 상단 프로필 (우측 상단) -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,100">
+        <Image Source="Assets/ProfilePicture.png" Width="60" Height="60" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <StackPanel>
+                <TextBlock Text="사용자 이름" FontSize="20" FontWeight="Bold"/>
+                <TextBlock Text="사용자 직책(프롬트, 백 등)" FontSize="14" Foreground="Gray"/>
+            </StackPanel>
+        </StackPanel>
+        
+        <!-- 본문 영역 (피드 섹션) -->
+         <Grid Margin="0,150,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+        <!-- 피드 섹션 -->
+            <StackPanel Grid.Row="1" Margin="20">
+                <TextBlock Text="Recent Updates" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <ListView Background="Transparent">
+                        <!-- 피드 항목 추가 영역 -->
+                        <TextBlock Text="사용자 피드 1" Margin="0,10"/>
+                        <TextBlock Text="사용자 피드 2" Margin="0,10"/>
+                        <TextBlock Text="사용자 피드 3" Margin="0,10"/>
+                    </ListView>
+            </StackPanel>
+         </Grid>
+    </Grid>
 </Window>
