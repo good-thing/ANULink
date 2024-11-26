@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ANULink (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "ANULink (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
