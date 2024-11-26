@@ -23,7 +23,6 @@
         <Rectangle Fill="Blue" Grid.Column="0" Grid.Row="1"/>
         <Rectangle Fill="Green" Grid.Column="1" Grid.Row="0"/>
         <Rectangle Fill="Yellow" Grid.Column="1" Grid.Row="1"/>
-        <Rectangle Fill="Yellow" Grid.Column="4" Grid.Row="4"/>
     </Grid>
     
 </Window>
