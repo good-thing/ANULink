@@ -32,7 +32,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- 상단 패널 -->
         <StackPanel Orientation="Horizontal" Background="#0077B5" Height="60" VerticalAlignment="Top" Margin="0,20">
-            <Image Source="Assets/LinkedInLogo.png" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" Height="40"/>
+            <Image Source="Assets/cat.jpg" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" Height="40"/>
             <Button Content="홈" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Transparent" Foreground="White" Margin="20,0"/>
             <Button Content="팀" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Transparent" Foreground="White" Margin="20,0"/>
             <Button Content="직책" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Transparent" Foreground="White" Margin="20,0"/>
@@ -43,7 +43,7 @@
         
         <!-- 상단 프로필 (우측 상단) -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,100">
-        <Image Source="Assets/ProfilePicture.png" Width="60" Height="60" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <Image Source="Assets/cat.jpg" Width="60" Height="60" VerticalAlignment="Center" Margin="0,0,10,0"/>
             <StackPanel>
                 <TextBlock Text="사용자 이름" FontSize="20" FontWeight="Bold"/>
                 <TextBlock Text="사용자 직책(프롬트, 백 등)" FontSize="14" Foreground="Gray"/>
