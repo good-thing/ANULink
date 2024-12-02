@@ -28,6 +28,7 @@
     </Grid>
     -->
     
+
     <!-- 초기 구성(추가한 부분: 간단한 틀만 구성했고 보고 괜찮으면 여기서 추가하고 아니면 지워도 돼)-->
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- 상단 패널 -->
@@ -49,16 +50,38 @@
                 <TextBlock Text="사용자 직책(프롬트, 백 등)" FontSize="14" Foreground="Gray"/>
             </StackPanel>
         </StackPanel>
-        
+
+        <!--아이템 뷰 섹션 만드는 중 김선원-->
+
+        <Grid.Resources>
+            <DataTemplate x:Key="ImageTemplate" x:DataType="local:CustomDataObject">
+                <Grid HorizontalAlignment="Left" Width="200" Height="140" Margin="4">
+                    <Image Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" Source="{x:Bind ImageLocation}" />
+                </Grid>
+            </DataTemplate>
+        </Grid.Resources>
+
+        <ListView ItemsSource="{Binding ItemsCollection}" 
+              Width="220" Height="400" HorizontalAlignment="Left" Grid.Column="0" ItemTemplate="{StaticResource ImageTemplate}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+        <!--*************************************-->
+
         <!-- 본문 영역 (피드 섹션) -->
          <Grid Margin="0,150,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-        <!-- 피드 섹션 -->
-            <StackPanel Grid.Row="1" Margin="20">
-                <TextBlock Text="Recent Updates" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+             
+
+            <!-- 피드 섹션 -->
+            <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1" Margin="20">
+                <TextBlock Grid.Column="1" Text="Recent Updates" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
                     <ListView Background="Transparent">
                         <!-- 피드 항목 추가 영역 -->
                         <TextBlock Text="사용자 피드 1" Margin="0,10"/>
