@@ -62,7 +62,8 @@
         </Grid.Resources>
 
         <ListView ItemsSource="{Binding ItemsCollection}" 
-              Width="220" Height="400" HorizontalAlignment="Left" Grid.Column="0" ItemTemplate="{StaticResource ImageTemplate}">
+          Width="220" Height="400" HorizontalAlignment="Left"
+          ItemTemplate="{StaticResource ImageTemplate}">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalAlignment" Value="Left"/>
