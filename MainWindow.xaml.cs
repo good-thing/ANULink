@@ -36,7 +36,7 @@ namespace ANULink
         public MainWindow()
         {
             this.InitializeComponent();
-
+            /*마지막 결과를 보기위한 주석처리한 부분
             // 샘플 데이터 추가
             ItemsCollection = new ObservableCollection<CustomDataObject>
             {
@@ -46,7 +46,23 @@ namespace ANULink
             };
 
             // DataContext 설정
-            this.DataContext = this;
+            this.DataContext = this;*/
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ProfileWindow profileWindow = new ProfileWindow(this);
+            profileWindow.Activate();
+        }
+        // 프로필 업데이트 메서드
+        public void UpdateProfile(string name, string position, string Feed1, string Feed2, string Feed3)
+        {
+            // 사용자 이름과 직책을 업데이트하는 로직을 여기에 추가
+            // 예시: TextBlock이나 다른 UI 요소에 값 설정
+            UserNameTextBlock.Text = name;
+            UserPositionTextBlock.Text = position;
+            UserFeed1.Text = Feed1;
+            UserFeed2.Text = Feed2;
+            UserFeed3.Text = Feed3;
         }
 
     }
