@@ -101,12 +101,12 @@
 
             <!-- 피드 섹션 (하단에 위치하도록 설정) -->
             <StackPanel Grid.Row="1" Margin="20">
-                <TextBlock Text="Recent Updates" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+                <TextBlock Text="경력" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
                 <ListView Background="Transparent">
                     <!-- 피드 항목 추가 영역 -->
-                    <TextBox x:Name="UserFeed1" Text="UserFeed1" Margin="0,10"/>
-                    <TextBox x:Name="UserFeed2" Text="UserFeed2" Margin="0,10"/>
-                    <TextBox x:Name="UserFeed3" Text="UserFeed3" Margin="0,10"/>
+                    <TextBlock x:Name="UserFeed1" Text="UserFeed1" Margin="0,10"/>
+                    <TextBlock x:Name="UserFeed2" Text="UserFeed2" Margin="0,10"/>
+                    <TextBlock x:Name="UserFeed3" Text="UserFeed3" Margin="0,10"/>
                 </ListView>
             </StackPanel>
         </Grid>
