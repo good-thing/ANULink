@@ -13,6 +13,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using System.Collections.ObjectModel;
+using Microsoft.UI.Xaml.Media.Imaging;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -36,18 +37,26 @@ namespace ANULink
         public MainWindow()
         {
             this.InitializeComponent();
-            /*마지막 결과를 보기위한 주석처리한 부분
+            
             // 샘플 데이터 추가
             ItemsCollection = new ObservableCollection<CustomDataObject>
             {
-            new CustomDataObject { ImageLocation = "Assets/image1.png" },
-            new CustomDataObject { ImageLocation = "Assets/image2.png" },
-            new CustomDataObject { ImageLocation = "Assets/image3.png" }
+            new CustomDataObject { ImageLocation = "ms-appx:///Assets/image1.png" },
+            new CustomDataObject { ImageLocation = "ms-appx:///Assets/image2.png" },
+            new CustomDataObject { ImageLocation = "ms-appx:///Assets/image3.png" }
             };
 
-            // DataContext 설정
-            this.DataContext = this;*/
         }
+        private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // GridView에서 선택된 항목 가져오기
+            if (e.AddedItems.Count > 0 && e.AddedItems[0] is CustomDataObject selectedItem)
+            {
+                // 확대 이미지를 업데이트
+                SelectedImage.Source = new BitmapImage(new Uri(selectedItem.ImageLocation));
+            }
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             ProfileWindow profileWindow = new ProfileWindow(this);
